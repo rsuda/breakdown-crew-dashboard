@@ -1,0 +1,120 @@
+<div class="mat-typography pad-24" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="12px" fxFlex="100">
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxFlex="60" fxLayoutGap="12px" class="test">
+       <div fxLayout="column" fxFlex fxLayoutGap="12px">
+         <mat-card class="events-handled" fxFlex fxLayout="column" fxLayoutGap="2px">
+          <span class="mat-body-2"><b>Number of Events Handled</b></span>
+          <div fxLayout="row">
+          <div fxLayout="column" fxLayoutAlign="center center" fxFlex>
+            <app-graph-events-handled fxFlex></app-graph-events-handled>
+            <span class="mat-h2">Today</span>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center" fxHide.xs fxFlex>
+            <app-graph-events-handled-week fxFlex></app-graph-events-handled-week>
+            <span class="mat-h2">This Week</span>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center" fxHide.xs fxFlex>
+            <app-graph-events-handled-month fxFlex></app-graph-events-handled-month>
+            <span class="mat-h2">This Month</span>
+          </div>
+          </div>
+         </mat-card>
+         <mat-card fxFlex="40" class="event-announcements">
+           <app-event-handle-time fxFlex></app-event-handle-time>
+         </mat-card>
+       </div>
+       <div fxLayout="column" fxFlex="60" fxLayoutGap="12px">
+         <mat-card class="calls-taken" fxFlex fxLayout="row" fxLayoutGap="12px">
+          <div fxFlex="60" fxLayout="column" fxLayoutGap="40px">
+            <span class="mat-body-2"><b>CALLS TAKEN</b></span>
+            <app-graph-calls-taken *ngIf="selected === 'month'" fxFlex></app-graph-calls-taken>
+            <app-graph-calls-taken-week *ngIf="selected === 'week'" fxFlex></app-graph-calls-taken-week>
+            <app-graph-calls-taken-today *ngIf="selected === 'today'" fxFlex></app-graph-calls-taken-today>
+          </div>
+          <div fxLayout="column" fxFlex fxLayoutGap="6px">
+            <mat-form-field appearance="standard">
+              <mat-label>Time</mat-label>
+              <mat-select [(value)]="selected">
+                <mat-option value="today">Today</mat-option>
+                <mat-option value="week">Week</mat-option>
+                <mat-option value="month">Month</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-card class="graph-card" fxFlex fxLayout="column">
+              <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="12px">
+                <div class="legend-key"></div>
+                <span><b> GRAPH KEY</b></span>
+              </div>
+              <div fxFlex fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="start center">
+                <mat-icon>recommended</mat-icon>
+                <span><b>23</b> DRIVERS ASSISTED</span>
+              </div>
+              <div fxFlex fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="start center">
+                <mat-icon>campaign</mat-icon>
+                <span><b>137</b> DRIVERS COACHED</span>
+              </div>
+              <div fxFlex fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="start center">
+                <mat-icon>settings</mat-icon>
+                <span><b>212</b> REPAIRS SCHEDULED</span>
+              </div>
+            </mat-card>
+          </div>
+      </mat-card>
+       </div>
+     </div>
+      <div fxLayout="row" fxFlex="38" fxLayoutGap="12px">
+        <mat-card fxFlex="60" fxLayoutGap="12px">
+          <div class="duration" fxLayout="column" fxFlex fxLayoutGap="0px">
+            <span class="mat-body-2" fxFlex><b>Calls Duration</b></span>
+            <app-graph-call-duration-my-stats fxFlex></app-graph-call-duration-my-stats>
+            <div fxLayout="row" fxLayoutGap="12px" fxFlex>
+              <div fxLayout="column">
+                <span class="mat-caption">This month</span>
+                <span class="mat-h4"><b>$3213</b></span>
+              </div>
+              <div fxLayout="column">
+                <span class="mat-caption">Last month</span>
+                <span class="mat-h4"><b>$12924</b></span>
+              </div>
+            </div>
+          </div>
+          <mat-divider [vertical]="true" style="height: 100%"></mat-divider>
+          <div class="duration" fxLayout="column" fxFlex>
+            <span class="mat-body-2" fxFlex><b>Calls Handled - Time Waiting</b></span>
+            <app-graph-call-duration-my-stats-time-waiting fxFlex></app-graph-call-duration-my-stats-time-waiting>
+            <div fxLayout="row" fxLayoutGap="12px" fxFlex>
+              <div fxLayout="column">
+                <span class="mat-caption">This month</span>
+                <span class="mat-h4"><b>$3213</b></span>
+              </div>
+              <div fxLayout="column">
+                <span class="mat-caption">Last month</span>
+                <span class="mat-h4"><b>$12924</b></span>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+        <mat-card fxLayout="column" fxFlex class="padding-top hero" fxLayoutGap="10px" fxLayoutAlign="space-around space-around">
+          <img src="lightbulb-on.svg" alt="" style="top: 3; right: 0; height: 220px; width: 300px; opacity: .1; position:absolute;">
+          <span class="mat-display-1" fxFlex>Training Opportunities</span>
+          <div fxLayout="row" fxLayoutGap="6px" fxFlex>
+            <mat-divider [vertical]="true" style="height: 100%"></mat-divider>
+            <div fxLayout="column" fxLayoutGap="6px" fxLayoutAlign="space-around" fxFlex>
+                <span class="mat-h3">Training Class Title</span>
+                <span class="mat-body-1">Short description of the training opportunity, what to expect, what kinds
+                  of certifications you receive, etc.</span>
+                <a href=""><span>ENROLL NOW</span></a>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayoutGap="6px" fxFlex>
+          <mat-divider [vertical]="true" style="height: 100%"></mat-divider>
+            <div fxLayout="column" fxLayoutGap="6px" fxLayoutAlign="space-around space-around">
+              <span class="mat-h3">Training Class Title</span>
+              <span class="mat-body-1">Short description of the training opportunity, what to expect, what kinds
+                of certifications you receive, etc.</span>
+              <a href=""><span>ENROLL NOW</span></a>
+              <div class="img"></div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+  </div>

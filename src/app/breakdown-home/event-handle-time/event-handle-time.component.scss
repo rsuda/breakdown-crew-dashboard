@@ -1,0 +1,37 @@
+@import '/src/styles.scss';
+
+.average-event-time{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    span{
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: center;
+        justify-content: center;
+        margin-bottom: 0;
+        padding-right: 0px;
+        margin-right: 0px;
+    }
+}
+
+.gray-scale{
+    height: 100%;
+    width: 100%;
+    color: rgb(112, 112, 112);
+    background-color: transparentize($color: #000000, $amount: .95);
+}
+
+.mat-display-2{
+    padding-top: 0 !important;
+    padding-bottom: 0;
+    margin: 0 !important;
+
+}
+
+.mat-display-1{
+    padding: 0 !important;
+    margin: 0 !important;
+    text-shadow: 1px 1px 0 #f6a71e !important;
+
+}
+

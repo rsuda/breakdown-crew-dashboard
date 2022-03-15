@@ -1,0 +1,42 @@
+@import '/src/styles.scss';
+
+.full-height{
+    height: 100%;
+}
+
+mat-nav-list{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.sidenav{
+    width: 5%;
+    max-width: 50px;
+    min-width: 50px;
+    background-color: white;
+    max-height: calc(100vh - 80px);
+    mat-icon{
+        display: inline-block;
+        color: $werner-theme-primary;
+    }
+    mat-list-item{
+        text-align: center;
+        justify-content: center;
+        border-color: green;
+
+        &:hover{
+            background-color: $werner-theme-gray2;
+            border-left:3px solid $werner-theme-primary;
+        }
+    }
+    mat-nav-list{
+        text-align: center;
+        justify-content: center;
+    }
+}
+mat-drawer-container{
+    height: calc(100vh - 80px);
+}
+mat-drawer-content{
+    height: calc(100vh - 80px);
+}

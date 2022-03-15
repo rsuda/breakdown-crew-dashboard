@@ -1,0 +1,36 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+
+$werner-theme-primary: mat-palette($mat-blue, 800);
+$werner-theme-accent:  mat-palette($mat-blue, 900);
+$werner-theme-warn:  mat-palette($mat-red, 800);
+
+$werner-theme: mat-light-theme((
+  color: (
+    primary: $werner-theme-primary,
+    accent: $werner-theme-accent,
+    warn: $werner-theme-warn,
+  )
+));
+
+@include angular-material-theme($werner-theme);
+
+$werner-theme-primary-dark: mat-palette($werner-theme-accent);
+$werner-theme-accent-dark: mat-palette($mat-yellow);
+$werner-theme-warn-dark: mat-palette($mat-red);
+
+$werner-theme-dark: mat-dark-theme((
+  color: (
+  primary: $werner-theme-primary-dark,
+  accent: $werner-theme-accent-dark,
+  warn: $werner-theme-warn-dark
+  )
+));
+.dark-theme-mode{
+  @include angular-material-theme($werner-theme-dark);
+}
+
+
+
+

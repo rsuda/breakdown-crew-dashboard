@@ -1,0 +1,134 @@
+@import '/src/styles.scss';
+
+.events-handled{
+    background-color: $werner-theme-dark-blue;
+        span{
+            text-transform: uppercase;
+            color: white;
+        }
+}
+
+.announcements-card{
+    padding-top: 12px;
+}
+
+.event-announcements{
+    height: 100%;
+    padding: 0;
+}
+
+.first-box{
+
+    border-right: 2px solid $werner-theme-gray2;
+}
+
+mat-card{
+    height: 100%;
+}
+
+.graph-card
+{
+    margin: 25px;
+    background-color: transparentize($color: #000000, $amount: .95);
+}
+
+.graph-card-announcements
+{
+    margin: 0px;
+    background-color: transparentize($color: #000000, $amount: .95);
+}
+
+.mat-display-2{
+    padding-bottom: 0;
+    margin: 0 !important;
+
+}
+
+.mat-display-1{
+    padding: 6px !important;
+    margin: 0 !important;
+    text-shadow: 1px 1px 0 #f6a71e !important;
+
+}
+
+:host ::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 1em !important;
+    padding-top: 0 !important;
+}
+
+.form-container{
+    height: 100px;
+    width: 200px;
+    position: relative;
+}
+
+.average-event-time{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    span{
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: center;
+        justify-content: center;
+        margin-bottom: 0;
+        padding-right: 0px;
+        margin-right: 0px;
+    }
+}
+
+.legend-key{
+    height: 5px;
+    width: 20px;
+    background-color: $werner-theme-primary;
+}
+
+mat-calendar{
+    padding-bottom: 0px;
+    margin: 0px;
+    width: 230px !important;
+    height: 150px !important;
+}
+
+.padding-top{
+    padding-top: 3px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+button{
+    background-color: $werner-theme-dark-blue;
+    color: $werner-theme-white;
+}
+
+mat-form-field{
+    margin-top: 0;
+}
+
+.calls-taken{
+    height: 100%;
+    width: 100%;
+}
+
+.calls-taken-announcements{
+    height: 70%;
+    width: 100%;
+}
+
+.calls-taken-graph{
+    width: 75%;
+}
+
+.mat-h2{
+    margin-bottom: 0 !important;
+}
+
+.mat-h4{
+    margin-bottom: 0 !important;
+}
+
+.mat-calendar ::ng-deep{
+    .mat-calendar-header{
+    padding: 0px !important;
+}
+}

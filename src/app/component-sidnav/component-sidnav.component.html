@@ -1,0 +1,13 @@
+<mat-drawer-container class="example-container mat-app-background" [ngClass]="{'dark-theme-mode': isDarkTheme}">
+    <mat-drawer mode="side" opened>
+        <mat-nav-list fxLayout="column" fxFlex>
+                <mat-list-item><mat-icon>checklist</mat-icon></mat-list-item>
+                <mat-list-item><a href="/my-stats-page"><mat-icon>person_outline</mat-icon></a></mat-list-item>
+                <mat-list-item><a href="/template-page"><mat-icon>groups</mat-icon></a></mat-list-item>
+                <mat-list-item><mat-icon>settings</mat-icon></mat-list-item>
+                <span fxFlex></span>
+                <mat-slide-toggle fxFlexAlign="center center" class="darkmode-position" [(ngModel)]="isDarkTheme"></mat-slide-toggle>
+        </mat-nav-list>
+    </mat-drawer>
+        <mat-drawer-content><router-outlet></router-outlet></mat-drawer-content>
+</mat-drawer-container>

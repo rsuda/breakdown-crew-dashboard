@@ -1,0 +1,87 @@
+@import '~@angular/material/theming';
+@import '/src/component-styles.scss';
+@import '/src/colors.scss';
+
+
+
+
+$custom-typography: mat-typography-config(
+
+    $display-4: mat-typography-level(60px, 60px, 300),
+    $display-3: mat-typography-level(48px, 48px, 400),
+    $display-2: mat-typography-level(34px, 40px, 400),
+    $display-1: mat-typography-level(24px, 30px, 400),
+
+    $headline: mat-typography-level(20px, 32px, 500),
+    $title: mat-typography-level(18px, 32px, 400),
+
+    $subheading-1: mat-typography-level(17px, 20px, 400),
+    $subheading-2: mat-typography-level(17px, 20px, 500),
+
+    $body-1: mat-typography-level(15px, 20px, 400),
+    $body-2: mat-typography-level(15px, 24px, 500),
+    $caption: mat-typography-level(12px, 20px, 400),
+    $button: mat-typography-level(14px, 14px, 400)
+);
+
+@include mat-core($custom-typography);
+
+
+html, body { height: 100%; background: $werner-theme-primary}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a{color:$werner-theme-accent; text-decoration: underline;
+    &:hover{color:$werner-theme-accent; text-decoration: none; cursor: pointer;}
+}
+
+.pad-24{padding: 10px; height: calc(100vh - 80px); background-color: var(--background); overflow-y: hidden;}
+
+
+button{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+.ui-library{
+  padding: 60px 0;
+    .wrapper{
+        max-width: 1500px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    h1{
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+}
+
+.example-panel{
+  padding: 50px  0;
+  h3{text-transform: uppercase; letter-spacing: 1.5px !important; font-size: 16px !important;}
+}
+
+.code-snippet{
+  background:#eaeaea;
+  border-radius: 4px;
+  padding: 20px;
+  pre{
+    border:1px solid $werner-theme-gray2;
+    padding:0 20px;
+    overflow-x:scroll;
+  }
+}
+
+
+code:hover{cursor: pointer; color:$werner-theme-gray1;}
+pre{margin: 0;
+  &:hover{cursor: pointer; color:$werner-theme-gray1;}
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
